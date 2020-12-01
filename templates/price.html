@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLIGHT PRICE PREDICTION</title>
+    
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    
+    <a href="/">FLIGHT PRICE</a>
+    
+    
+    <from action="\predict", method="post">
+    
+          <label for="DOJ">DATE OF JOURNEY</label>
+          <br>
+          <input type="datetime-local" id="DOJ" name="DOJ" required="required">
+      
+          <br><br><br>
+      
+          <label for="DOA">DATE OF ARRIVAL</label>
+          <br>
+          <input type="datetime-local" id="DOA" name="DOA" required="required">
+      
+          <br><br><br>
+      
+          <label for="source">SOURCE</label>
+          <br>
+          <select id="source" name="source" required="required">
+             <option value="Delhi">Delhi</option>
+             <option value="Kolkata">Kolkata</option>
+             <option value="Mumbai">Mumbai</option>
+             <option value="Chennai">Chennai</option>
+         </select>
+      
+         <br><br><br>
+      
+         <label for="Destination">DESTINATION</label>
+         <br>
+         <select id="Destination" name="Destination" required="required">
+             <option value="Delhi">Delhi</option>
+             <option value="Kolkata">Kolkata</option>
+             <option value="Mumbai">Mumbai</option>
+             <option value="Chennai">Chennai</option>
+             <option value="Cochin">Cochin</option>
+         </select>
+      
+        <br><br<br>
+      
+        <label for="Total Stops">TOTAL STOPS</label>
+        <br>
+        <select id="Total Stops" name="Total Stops" required="required">
+             <option value="0">0</option>
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+        </select>
+      
+        <br><br><br>
+      
+        <label for="Airline">AIRLINE</label>
+        <br>
+        <select id="Airline" name="Airline" required="required">
+             <option value="Jet Airways">Jet Airways</option>
+             <option value="IndiGo">IndiGo</option>
+             <option value="Air India">Air India</option>
+             <option value="Multiple carriers">Multiple carriers</option>
+             <option value="SpiceJet">SpiceJet</option>
+             <option value="Vistara">Vistara</option>
+             <option value="Air Asia">Air Asia</option>
+             <option value="GoAir">GoAir</option>
+             <option value="Multiple carriers Premium economy">Multiple carriers Premium economy
+                                </option>
+             <option value="Jet Airways Business">Jet Airways Business</option>
+             <option value="Vistara Premium economy">Vistara Premium economy</option>
+             <option value="Trujet">Trujet</option>
+        </select>
+      
+        <br><br><br>
+      
+        <label for="Additional Info">ADDITIONAL INFO</label>
+        <br>
+        <select id="Additional Info" name="Additional Info" required="required">
+             <option value="No Info">No Info</option>
+             <option value="In-flight meal not included">In-flight meal not included</option>
+             <option value="No check-in baggage included">No check-in baggage included</option>
+             <option value="1 Long layover">1 Long layover</option>
+             <option value="Change airports">Change airports</option>
+             <option value="Business class">Business class</option>
+             <option value="Red-eye flight">Red-eye flight</option>
+             <option value="2 Long layover">2 Long layover</option>
+             <option value="1 Short layover">1 Short layover</option>
+        </select>
+      
+        <br><br><br>
+      
+       <!-- Submit -->
+       <input type="submit" value="Submit">
+
+    </form>
+    
+    <br>
+    <br>
+    
+    <h3>{{ prediction_text }}<h3>
+
+    <br>
+    <br>
+    <p>©2020 MANOJ KUMAR</p>    
+    
+
+</body>
+
+</html>
